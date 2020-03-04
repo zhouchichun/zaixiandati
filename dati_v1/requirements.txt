@@ -2,4 +2,4 @@ flask-cors==3.0.6
 flask==1.0.2
 jinja2==2.10
 six==1.11.0
-requests==2.19.1
+requests==2.20.0

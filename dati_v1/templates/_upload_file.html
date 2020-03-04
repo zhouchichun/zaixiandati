@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="row" id="dashboard">  </div>     
+             <div class="form-group">
+	         <label class="col-sm-2 control-label">请选择题目</label>
+	         <div class="col-sm-10">
+		      <input type="file" name="file_name" id="file_name" style="width:70%; margin-left:15%">
+                 </div>
+	     </div>
+   
+
+    
+             <div class="raw" style="margin-top:10%">
+                                <center>
+				    <button type="button" class="btn btn-primary" id="upload">
+					    上传题目
+				    </button>
+                                </center>
+             </div>
+ 
+             <div class="raw" style="margin-top:10%">
+                                <center>
+				    <a href="static/muban.txt">
+					    下载题目模板
+				    </a>
+                                </center>
+             </div>
+ 
+ 
+   
+
+
+
+
+{% endblock %}

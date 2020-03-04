@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="row" id="dashboard"> </div>      
+   
+
+
+    
+    <div class="raw" style="margin-top:10%">
+                 <center>
+                  <span>完成人数{{done}}人，总人数{{total}}人
+                 </center>
+    </div>
+
+
+
+
+
+    <div class="raw" style="margin-top:10%">
+                   <center>
+	              <button type="button" class="btn btn-primary" id="get_history">
+					导出答题信息
+	              </button>
+                   </center>
+    </div>
+ 
+     <div class="raw" style="margin-top:10%">
+                                <center>
+				    <button type="button" class="btn btn-primary" id="build_new">
+					新建考试
+				    </button>
+                                </center>
+    </div>
+ 
+
+   
+
+
+
+
+{% endblock %}

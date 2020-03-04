@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="row" id="dashboard">     </div>  
+   
+     {% for idd, qu in query.items() %}
+       <div class="row" style="margin-top:5%"> 
+        <span>{{idd}}、{{qu.tigan}}<span></br></br>
+          {% for AL,Ch in qu.xuanxiang.items() %}
+ 
+            <input type="checkbox" name={{idd}} id={{AL}}  style="position:relative; opacity:1;pointer-events:auto"><label for={{AL}} style="margin-right:2%">{{Ch}}</label></br> 
+          {% endfor %}
+       </div>
+      
+     {% endfor %}
+
+
+     <div class="row" style="margin-top:10%">
+                                <center>
+                                    <button type="button" class="btn btn-primary" id="submit_student">
+                                        提交
+                                    </button>
+                                </center>
+ 
+     </div>
+{% endblock %}

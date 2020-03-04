@@ -1,0 +1,58 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta charset="utf-8"/>
+    <title>歪盖榴莲——答题</title>
+
+     <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=OAVVRYG66pxk9XXKHfhcULmGV2Fx7FQn"></script>
+     <script>
+        window.BMap = BMap
+     </script>
+
+     <script src="{{url_for('static',filename='js/iosSelect.js')}}"></script>
+     <script src="{{url_for('static',filename='js/jquery.min.js')}}"></script>
+    
+     <script src="{{url_for('static',filename='js/bootstrap.min.js')}}"></script>
+   
+     <link rel="stylesheet" href="{{ url_for('static', filename='css/iosSelect.css') }}">
+     <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    
+     <link href="{{ url_for('static', filename='css/materialize.min.css') }}" rel="stylesheet">
+     <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+     <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+
+
+  <body>
+     <div id="main">
+
+       <nav class="green lighten-2" role="navigation">
+         <div class="nav-wrapper container">
+             <a  class="brand-logo" id="return_intro">在线答题平台</a>
+              <ul id="nav-mobile" class="right hide-on-med-and-down">
+                 {% if is_login %}
+                   <li><a class="waves-effect waves-light btn orange sidenav-close" id="app-btn"  id="my2">{{user}}</a>
+                   </li>
+                  <li><a class="waves-effect waves-light btn grey sidenav-close" id="logout-btn">退出</a></li>
+                  {% else %}
+                 <li><a claddss="waves-effect waves-light btn red sidenav-close" href="#login"></a></li>
+                 {% endif %}
+         </ul>
+        </div>
+      </nav>
+
+        <main>
+            {% block content %}{% endblock %}
+        </main>
+
+
+        <footer class="center" style="margin-top:20%">
+           <small> &copy; 2020 <a class="blue-text link" href="http://117.50.97.167:9603/" title="Written by Grey Li">513人工智能实验室</a> -</small>
+        </footer>
+     </div>
+	  <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+	  <script src="{{ url_for('static', filename='js/materialize.min.js') }}"></script>
+	  <script src="{{ url_for('static', filename='js/script.js') }}" type="text/javascript"></script>
+  </body>
+</html>
+

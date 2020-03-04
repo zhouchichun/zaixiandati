@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="row" id="dashboard">       
+    </div>
+             <div class="form-group">
+	         <label class="col-sm-2 control-label">姓名:</label>
+	         <div class="col-sm-10">
+		      <input list="browsers_name" name="browser" id="name" style="width:70%; margin-left:15%">
+				<datalist id="browsers_name">
+                                    {%for name in names %}
+				    <option value="{{name}}">
+	                            {% endfor %}
+                                </datalist>
+	    
+                 </div>
+	    </div>
+            <div class="form-group">
+		     <label class="col-sm-2 control-label">身体状况:</label>
+			<div class="col-sm-10">
+			    <input list="browsers_state" name="browser" id="state" style="width:70%; margin-left:15%">
+				<datalist id="browsers_state">
+				    <option value="健康">
+				    <option value="感冒、发烧">
+			            <option value="新冠疑似">
+				    <option value="新冠确诊">
+				</datalist>
+			</div>
+            </div>
+                <center>
+                      <p>健康、感冒、疑似或者感染</p>
+                </center>
+   
+
+         <div class="form-group">
+		     <label class="col-sm-2 control-label">是否出家乡省:</label>
+			<div class="col-sm-10">
+			    <input list="browsers_is_out" name="browser" id="is_out" style="width:70%; margin-left:15%">
+				<datalist id="browsers_is_out">
+			            <option value="是">
+				    <option value="否">
+				</datalist>
+			</div>
+            </div>
+                <center>
+                      <p>从家出发去其他省份, 请选是、否</p>
+                </center>
+    
+    </div>
+    <div class="raw" style="margin-top:10%">
+                                <center>
+				    <button type="button" class="btn btn-primary" id="confirm">
+					    签到
+				    </button>
+                                </center>
+    </div>
+ 
+    </div>
+    
+  </div>
+   
+
+
+
+
+{% endblock %}
